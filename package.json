@@ -1,10 +1,11 @@
 {
     "name": "emoji-uuid",
     "version": "1.0.0",
-    "description": "",
+    "description": "A simple converter between serial codes/alphanumeric code and emojis",
     "main": "dist/index.js",
     "scripts": {
         "start": "node dist/index.js",
+        "prebuild" : "eslint . --ext .ts --fix",
         "build": "rimraf ./dist && tsc",
         "dev": "ts-node-dev src/index.ts"
     },
