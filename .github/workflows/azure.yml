@@ -15,11 +15,11 @@
 on:
   push:
     branches:
-      - master
+      - main
   pull_request:
     types: [opened, synchronize, reopened, closed]
     branches:
-      - master
+      - main
 
 env:
   AZURE_WEBAPP_NAME: emoji-uuid    # set this to your application's name
