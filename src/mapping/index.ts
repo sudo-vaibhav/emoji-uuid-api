@@ -65,6 +65,9 @@ const map: Mapping = {
     X: '🤠',
     Y: '🥳',
     Z: '😎',
+    '-': '🍑',
+    _: '🍆',
+    ' ': '🥑',
 };
 
 const inverted: Mapping = {};
