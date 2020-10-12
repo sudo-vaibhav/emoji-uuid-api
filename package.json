@@ -6,7 +6,7 @@
     "scripts": {
         "prestart": "npm run build",
         "start": "npm run build && node dist/index.js",
-        "build": "rimraf ./build && tsc",
+        "build": "rimraf ./dist && tsc",
         "dev": "ts-node-dev src/index.ts"
     },
     "repository": {
