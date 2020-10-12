@@ -20,4 +20,4 @@ localhost:8080/**decode**/🤐🤐😚🥰🍑😘😝😍🤫🍑😗😍🤭�
 
 ## Demo
 
-A temporary deployment for demo purposes can be found at https://try-emoji-uuid.azurewebsites.net/
+A temporary deployment for demo purposes can be found at https://emoji-uuid.azurewebsites.net/
