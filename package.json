@@ -5,9 +5,8 @@
     "main": "dist/index.js",
     "scripts": {
         "prestart": "npm run build",
-        "start": "node dist/index.js",
-        "prebuild": "eslint . --ext .ts --fix",
-        "build": "tsc",
+        "start": "npm run build && node dist/index.js",
+        "build": "rimraf ./build && tsc",
         "dev": "ts-node-dev src/index.ts"
     },
     "repository": {
@@ -21,7 +20,8 @@
     },
     "homepage": "https://github.com/sudo-vaibhav/emoji-uuid#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "express": "^4.17.1",
+        "rimraf": "^3.0.2"
     },
     "devDependencies": {
         "@types/express": "^4.17.8",
