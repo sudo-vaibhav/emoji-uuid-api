@@ -1,0 +1,36 @@
+{
+    "name": "emoji-uuid",
+    "version": "1.0.0",
+    "description": "",
+    "main": "dist/index.js",
+    "scripts": {
+        "prestart": "npm run build",
+        "start": "node .",
+        "prebuild": "eslint . --ext .ts --fix",
+        "build": "tsc",
+        "dev": "ts-node-dev src/index.ts"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/sudo-vaibhav/emoji-uuid.git"
+    },
+    "author": "Vaibhav Chopra",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/sudo-vaibhav/emoji-uuid/issues"
+    },
+    "homepage": "https://github.com/sudo-vaibhav/emoji-uuid#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "@types/express": "^4.17.8",
+        "@types/node": "^14.11.8",
+        "@typescript-eslint/eslint-plugin": "^4.4.0",
+        "@typescript-eslint/parser": "^4.4.0",
+        "eslint": "^7.11.0",
+        "eslint-plugin-no-loops": "^0.3.0",
+        "ts-node-dev": "^1.0.0-pre.63",
+        "typescript": "^4.0.3"
+    }
+}
