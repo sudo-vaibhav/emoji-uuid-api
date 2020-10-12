@@ -3,7 +3,7 @@ import router from './api/routes';
 import requestLogger from './middleware/requestLogger';
 import errorHandler from './middleware/errorHandler';
 const app = express();
-const port = 8080 || process.env.PORT;
+const port = process.env.PORT || 8080;
 
 app.use(requestLogger);
 
