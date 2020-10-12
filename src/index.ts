@@ -8,7 +8,7 @@ const port = process.env.PORT || 8080;
 app.use(requestLogger);
 
 app.get('/', (req: Request, res: Response) => {
-    res.send('welcome to emoji-uuid ✋!');
+    res.send('welcome to emoji-uuid ✋! Nice to meet you.');
 });
 
 app.use(router);
