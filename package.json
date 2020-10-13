@@ -2,12 +2,13 @@
     "name": "emoji-uuid",
     "version": "1.0.0",
     "description": "A simple converter between serial codes/alphanumeric code and emojis",
-    "main": "dist/index.js",
+    "main": "dist/server.js",
     "scripts": {
-        "start": "node dist/index.js",
-        "prebuild": "eslint . --ext .ts --fix",
+        "start": "node .",
+        "prebuild": "eslint . --ext .ts --fix && npm run test",
         "build": "rimraf ./dist && tsc",
-        "dev": "ts-node-dev src/index.ts"
+        "dev": "ts-node-dev src/server.ts",
+        "test": "jest"
     },
     "repository": {
         "type": "git",
@@ -29,11 +30,33 @@
     "devDependencies": {
         "@types/express": "^4.17.8",
         "@types/node": "^14.11.8",
+        "@types/supertest": "^2.0.10",
         "@typescript-eslint/eslint-plugin": "^4.4.0",
         "@typescript-eslint/parser": "^4.4.0",
         "eslint": "^7.11.0",
         "eslint-plugin-no-loops": "^0.3.0",
+        "jest": "^26.5.3",
+        "supertest": "^5.0.0",
+        "ts-jest": "^26.4.1",
         "ts-node-dev": "^1.0.0-pre.63",
         "typescript": "^4.0.3"
+    },
+    "jest": {
+        "moduleFileExtensions": [
+            "ts",
+            "tsx",
+            "js"
+        ],
+        "transform": {
+            "^.+\\.(ts|tsx)$": "ts-jest"
+        },
+        "globals": {
+            "ts-jest": {
+                "tsConfigFile": "tsconfig.json"
+            }
+        },
+        "testMatch": [
+            "**/__tests__/*.+(ts|tsx|js)"
+        ]
     }
 }
