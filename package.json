@@ -5,10 +5,11 @@
     "main": "dist/server.js",
     "scripts": {
         "start": "node .",
-        "prebuild": "eslint . --ext .ts --fix && npm run test",
+        "prebuild": "npm run lint && npm run test",
         "build": "rimraf ./dist && tsc",
         "dev": "ts-node-dev src/server.ts",
-        "test": "jest"
+        "test": "jest",
+        "lint": "eslint . --ext .ts"
     },
     "repository": {
         "type": "git",
