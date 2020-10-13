@@ -1,18 +1,18 @@
-import express, { Request, Response } from 'express';
+import express from 'express';
 import router from './api/routes';
-import requestLogger from './middleware/requestLogger';
 import errorHandler from './middleware/errorHandler';
+
+import { resolve } from 'path';
+import { config } from 'dotenv';
+config({ path: resolve(__dirname, '../.env') });
+
 const app = express();
 const port = process.env.PORT || 8080;
 
-app.use(requestLogger);
+import morgan from 'morgan';
 
-app.get('/', (req: Request, res: Response) => {
-    res.send('welcome to emoji-uuid ✋! Nice to meet you.');
-});
-
+app.use(morgan('combined'));
 app.use(router);
-
 app.use(errorHandler);
 
 app.listen(port, () => {
