@@ -19,13 +19,13 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-
     - name: npm install, build, and test
       run: |
         npm install
         npm run build --if-present
         npm run test --if-present
-
+      env:
+        TEST_STRING: ${{ secrets.TEST_STRING }}
     - name: 'Deploy to Azure Web App'
       uses: azure/webapps-deploy@v2
       with:
