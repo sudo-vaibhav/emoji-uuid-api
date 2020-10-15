@@ -2,6 +2,9 @@
     "name": "emoji-uuid-api",
     "version": "1.0.0",
     "description": "A simple converter between serial codes/alphanumeric code and emojis",
+    "publishConfig": {
+        "registry": "https://npm.pkg.github.com/"
+    },
     "main": "dist/server.js",
     "scripts": {
         "start": "node .",
